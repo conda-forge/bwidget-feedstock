@@ -1,5 +1,5 @@
 set TCL_LIB_PATH=%PREFIX%\Library\lib\tcl8.6\%PKG_NAME%%PKG_VERSION%
-mkdir %TCL_LIB_PATH%
-xcopy src\*.tcl %TCL_LIB_PATH%\
-xcopy src\images %TCL_LIB_PATH%\images\
-xcopy src\lang %TCL_LIB_PATH%\lang\
+mkdir %TCL_LIB_PATH% || exit /b 1
+xcopy src\*.tcl %TCL_LIB_PATH%\ || exit /b 1
+xcopy src\images %TCL_LIB_PATH%\images\ || exit /b 1
+xcopy src\lang %TCL_LIB_PATH%\lang\ || exit /b 1
